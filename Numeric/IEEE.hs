@@ -23,7 +23,7 @@ import Data.Word
 import Foreign.C.Types( CFloat, CDouble )
 
 -- | IEEE floating point types.
-class (RealFloat a) => IEEE a where
+class IEEE a where
     -- | Infinity value.
     infinity :: a
 

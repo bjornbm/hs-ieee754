@@ -71,7 +71,7 @@ class Eq a => AEq a where
     (~==) = (==)
     {-# INLINE (~==) #-}
 
-approxEqIEEE :: (IEEE a) => a -> a -> Bool
+approxEqIEEE :: (IEEE a, RealFloat a) => a -> a -> Bool
 approxEqIEEE x y =
     ( sameSignificandBits x y >= d
     || (abs x < epsilon && abs y < epsilon)
@@ -86,7 +86,7 @@ identicalComplexIEEE (x1 :+ y1) (x2 :+ y2) =
     (identicalIEEE x1 x2) && (identicalIEEE y1 y2)
 {-# INLINE identicalComplexIEEE #-}
 
-approxEqComplexIEEE :: (IEEE a) => Complex a -> Complex a -> Bool
+approxEqComplexIEEE :: (IEEE a, RealFloat a) => Complex a -> Complex a -> Bool
 approxEqComplexIEEE z1 z2 = let
     (r1,c1) = polar z1
     (r2,c2) = polar z2

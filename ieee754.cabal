@@ -1,5 +1,5 @@
 name:            ieee754
-version:         0.7.8
+version:         0.8
 homepage:        http://github.com/patperry/hs-ieee754
 synopsis:        Utilities for dealing with IEEE floating point numbers
 description:
@@ -16,7 +16,7 @@ cabal-version: >= 1.2.0
 build-type:      Simple
 tested-with:     GHC ==7.6.3
 
-extra-source-files: LICENSE.Tango NEWS cbits/feqrel_source.c
+extra-source-files: LICENSE.Tango CHANGELOG cbits/feqrel_source.c
                     tests/Makefile tests/Tests.hs
 
 library
